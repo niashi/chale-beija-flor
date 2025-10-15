@@ -19,6 +19,7 @@ export default function Page() {
     <main>
       {/* HERO */}
       <section className="w-full">
+        {/* Imagem Principal */}
         <div className="relative w-full h-[42vh] md:h-[56vh] overflow-hidden flex justify-center items-center">
           <div className="relative w-[90%] md:w-[90%] h-[90%]">
             <img
@@ -38,8 +39,8 @@ export default function Page() {
             </h1>
 
             {/* Subtítulo */}
-            <h2 className="flex flex-wrap items-center gap-1 text-3xl md:text-5xl font-semibold tracking-tight mt-3 text-[var(--sub)]">
-              Um aconchego bem-vindo em meio à
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mt-3 text-[var(--sub)]">
+              Um aconchego bem-vindo em meio à{" "}
               <span className="inline-flex items-center gap-1 whitespace-nowrap">
                 Natureza
                 <svg
@@ -61,15 +62,15 @@ export default function Page() {
             </h2>
 
             {/* Descrição */}
-            <p className="mt-3 text-lg text-[var(--muted)]">
+            <p className="mt-8 text-lg text-[var(--muted)]">
               Chalé exclusivo com deck e banheira, cercado pela floresto. Perfeito para se isolar do
-              caos da cidade, descansar e curtir — tudo isso com um preço amigável e
-              atendimento excepcional.
+              caos da cidade, descansar e curtir — tudo isso com um preço amigável e atendimento
+              excepcional.
             </p>
           </div>
 
           {/* Preço, Booking, Airbnb e Wpp */}
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap md:justify-center gap-3">
             <div className="inline-flex items-center rounded-2xl border border-neutral-300 px-4 py-2 text-sm">
               A partir de <span className="font-bold ml-1 text-lg">R$ 364,99/noite</span>
             </div>
@@ -100,8 +101,7 @@ export default function Page() {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  className="w-8 h-8 md:w-10 md:h-10"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -123,8 +123,7 @@ export default function Page() {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  className="w-8 h-8 md:w-10 md:h-10"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -145,8 +144,7 @@ export default function Page() {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  className="w-8 h-8 md:w-10 md:h-10"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -167,8 +165,7 @@ export default function Page() {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  className="w-8 h-8 md:w-10 md:h-10"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
