@@ -62,8 +62,8 @@ export default function Page() {
 
             {/* Descrição */}
             <p className="mt-3 text-lg text-[var(--muted)]">
-              Chalé exclusivo com deck e banheira, cercado por árvores. Perfeito para se isolar do
-              caos da cidade, descansar e curtir a dois — tudo isso com um preço amigável e
+              Chalé exclusivo com deck e banheira, cercado pela floresto. Perfeito para se isolar do
+              caos da cidade, descansar e curtir — tudo isso com um preço amigável e
               atendimento excepcional.
             </p>
           </div>
@@ -231,7 +231,7 @@ export default function Page() {
       </section>
 
       {/* DÚVIDAS? */}
-      <section className="border-t border-secondary py-16 bg-neutral align-item text-center justify-center mb-0">
+      <section className="border-t border-secondary py-16 bg-neutral align-item text-center justify-center pb-0">
         {/* Texto */}
         <div className="text-center">
           <h2 className="section-title">Dúvidas?</h2>
@@ -250,9 +250,9 @@ export default function Page() {
             className="animate-point-down"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M40 0 V85" stroke="black" strokeWidth="6" strokeLinecap="round" />
+            <path d="M40 0 V65" stroke="black" strokeWidth="6" strokeLinecap="round" />
             <path
-              d="M25 70 L40 85 L55 70"
+              d="M25 50 L40 65 L55 50"
               stroke="black"
               strokeWidth="6"
               strokeLinecap="round"
@@ -264,11 +264,14 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="border-t border-secondary py-8 bg-neutral">
-        <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
+        <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 md:pr-25">
+          {/* Chalé Beija-Flor */}
+          <div className="flex items-center gap-3 border border-gray-500 rounded-md px-3 py-2">
             <span className="font-medium">Chalé Beija-Flor</span>
             <GiHummingbird size={28} />
           </div>
+
+          {/* Cog & Bit */}
           <a
             href="#"
             target="_blank"
