@@ -68,7 +68,7 @@ body {
 .btn-outline-booking {
   border: 1px solid var(--wood);
   color: var(--wood);
-  background: #a3c5f8;
+  background: #fffdfb8f;
 }
 .btn-outline-booking:hover {
   background: var(--wood);
@@ -79,7 +79,7 @@ body {
 .btn-outline-airbnb {
   border: 1px solid var(--wood);
   color: var(--wood);
-  background: #ffbac7;
+  background: #fffdfb8f;
 }
 .btn-outline-airbnb:hover {
   background: var(--wood);

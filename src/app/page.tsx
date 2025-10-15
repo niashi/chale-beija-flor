@@ -7,7 +7,8 @@ import { GiHummingbird } from "react-icons/gi";
 import Image from "next/image";
 
 const WHATSAPP = "5535998418107";
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=Olá!%20Tenho%20de%20dúvidas%20a%20respeito%20do%20Chalé%20Beija-Flor.%20:)`;
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Chalé%20Beija-Flor.%20:)`;
+const WHATSAPP_URL_2 = `https://wa.me/${WHATSAPP}?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Chalé%20Beija-Flor.%20:)`;
 const BOOKING_URL =
   "https://www.booking.com/hotel/br/chale-beija-flor-paraisopolis.pt-br.html?aid=2127532&label=metagha-link-MRBR-hotel-12249898_dev-desktop_los-1_bw-32_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-50_bc-ALrrKg_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20251109_ppt-B-Share-QD9aJH%401759963544&sid=645fb690fe7273dd73ea87213da57dce&all_sr_blocks=1224989801_395361070_2_0_0&checkin=2025-11-09&checkout=2025-11-10&dest_id=12249898&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1224989801_395361070_2_0_0&hpos=1&matching_block_id=1224989801_395361070_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1224989801_395361070_2_0_0__36400&srepoch=1759963553&srpvid=893ea00e264d07fd&type=total&ucfs=1&";
 const AIRBNB_URL =
@@ -73,12 +74,12 @@ export default function Page() {
               A partir de <span className="font-bold ml-1 text-lg">R$ 364,99/noite</span>
             </div>
 
-            <Link href={BOOKING_URL} target="_blank" className="btn btn-outline">
+            <Link href={BOOKING_URL} target="_blank" className="btn btn-outline-booking">
               Ver no Booking
               <TbBrandBooking size={28} color="#003580" />
             </Link>
 
-            <Link href={AIRBNB_URL} target="_blank" className="btn btn-outline">
+            <Link href={AIRBNB_URL} target="_blank" className="btn btn-outline-airbnb">
               Ver no Airbnb
               <FaAirbnb size={28} color="#FF5A5F" />
             </Link>
@@ -230,25 +231,24 @@ export default function Page() {
       </section>
 
       {/* DÚVIDAS? */}
-      <section className="border-t border-secondary py-8 bg-neutral overflow-hidden">
-        {/* CTA */}
-        <div className="max-w-5xl mb-5 mx-auto text-center">
-          <div className="mb-8">
-            <h2 className="section-title">Dúvidas?</h2>{" "}
-            <h3 className="text-3xl md:text-4xl font-semibold tracking-tight mt-3 text-[var(--sub)]">
-              Fala com a gente pelo WhatsApp!
-            </h3>
-          </div>
+      <section className="border-t border-secondary py-16 bg-neutral align-item text-center justify-center mb-0">
+        {/* Texto */}
+        <div className="text-center">
+          <h2 className="section-title">Dúvidas?</h2>
+          <h3 className="text-3xl md:text-4xl font-semibold tracking-tight mt-3 text-[var(--sub)]">
+            Fala com a gente pelo WhatsApp!
+          </h3>
         </div>
 
-        {/* Seta Única - MOBILE e DESKTOP */}
-        <div className="flex justify-end md:pr-3">
+        {/* Seta - MOBILE e DESKTOP */}
+        <div className="flex justify-end pr-1 md:pr-3">
           <svg
             width="80"
             height="100"
             viewBox="0 0 80 100"
             fill="none"
             className="animate-point-down"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M40 0 V85" stroke="black" strokeWidth="6" strokeLinecap="round" />
             <path
@@ -293,7 +293,7 @@ export default function Page() {
 
       {/* FAB do WhatsApp */}
       <Link
-        href={WHATSAPP_URL}
+        href={WHATSAPP_URL_2}
         target="_blank"
         aria-label="Reservar pelo WhatsApp"
         className="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-green-500 hover:bg-green-600 transition-all rounded-full p-4 shadow-lg flex items-center justify-center text-white"
