@@ -72,7 +72,7 @@ export default function Page() {
           {/* Preço, Booking, Airbnb e Wpp */}
           <div className="mt-6 flex flex-wrap md:justify-center gap-3">
             <div className="inline-flex items-center rounded-2xl border border-neutral-300 px-4 py-2 text-sm">
-              A partir de <span className="font-bold ml-1 text-lg">R$ 364,99/noite</span>
+              A partir de <span className="font-bold ml-1 text-lg">R$ 399,00/noite</span>
             </div>
 
             <Link href={BOOKING_URL} target="_blank" className="btn btn-outline-booking">
