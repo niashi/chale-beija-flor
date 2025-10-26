@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Quicksand, Amatic_SC } from "next/font/google";
 
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://chalebeijaflor.netlify.app";
+const TITLE = "Chalé Beija-Flor – Refúgio Aconchegante";
+const DESC =
+  "O Chalé Beija-Flor é um refúgio aconchegante cercado pela natureza. Reserve pelo WhatsApp, AirBnb ou Booking.";
+
 // Fonte principal (texto)
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -16,15 +21,24 @@ const amatic = Amatic_SC({
   variable: "--font-amatic",
 });
 
+
 export const metadata: Metadata = {
-  title: "Chalé Beija-Flor – refúgio aconchegante",
-  description:
-    "O Chalé Beija-Flor é um refúgio aconchegante cercado pela natureza. Reserve pelo WhatsApp ou Booking.",
+  metadataBase: new URL(SITE),
+  title: { default: TITLE, template: "%s | Chalé Beija-Flor Gonçalves MG" },
+  description: DESC,
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Chalé Beija-Flor",
-    description: "Refúgio aconchegante na natureza, perfeito para relaxar.",
     type: "website",
+    url: SITE,
+    title: TITLE,
+    description: DESC,
+    images: ["/og.jpg"],
+    locale: "pt_BR",
+    siteName: "Chalé Beija-Flor",
   },
+  robots: { index: true, follow: true },
+  // Quando for verificar no Search Console, descomente e cole o token:
+  // verification: { google: "COLE_AQUI_O_TOKEN" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

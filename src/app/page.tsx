@@ -5,6 +5,7 @@ import { TbBrandBooking } from "react-icons/tb";
 import { FaAirbnb } from "react-icons/fa";
 import { GiHummingbird } from "react-icons/gi";
 import Image from "next/image";
+import LocalBusinessJsonLd from "../components/LocalBusinessJsonLd";
 
 const WHATSAPP = "5535998418107";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Chalé%20Beija-Flor.%20:)`;
@@ -13,6 +14,24 @@ const BOOKING_URL =
   "https://www.booking.com/hotel/br/chale-beija-flor-paraisopolis.pt-br.html?aid=2127532&label=metagha-link-MRBR-hotel-12249898_dev-desktop_los-1_bw-32_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-50_bc-ALrrKg_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20251109_ppt-B-Share-QD9aJH%401759963544&sid=645fb690fe7273dd73ea87213da57dce&all_sr_blocks=1224989801_395361070_2_0_0&checkin=2025-11-09&checkout=2025-11-10&dest_id=12249898&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1224989801_395361070_2_0_0&hpos=1&matching_block_id=1224989801_395361070_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1224989801_395361070_2_0_0__36400&srepoch=1759963553&srpvid=893ea00e264d07fd&type=total&ucfs=1&";
 const AIRBNB_URL =
   "https://www.airbnb.com.br/rooms/1165860464884234578?viralityEntryPoint=1&s=76&source_impression_id=p3_1760490990_P3qvqWA9ImuJNWtj";
+
+// ...dentro do componente da página, imediatamente antes de </main> ou </div> raíz:
+<LocalBusinessJsonLd
+  name="Chalé Beija-Flor"
+  url={process.env.NEXT_PUBLIC_SITE_URL || "https://SEU-SITE.netlify.app"}
+  phoneE164="+55359XXXXYYYY" // confira se tem o dígito 9 (celular)
+  street="Estrada Tal, s/n"
+  city="Gonçalves"
+  region="MG"
+  postalCode="37680-000"
+  countryCode="BR"
+  lat={-22.66}
+  lng={-45.86}
+  images={[
+    "https://SEU-SITE.netlify.app/galeria/chale-1.webp",
+    "https://SEU-SITE.netlify.app/galeria/chale-2.webp",
+  ]}
+/>;
 
 export default function Page() {
   return (
@@ -300,6 +319,23 @@ export default function Page() {
       >
         <FaWhatsapp size={25} />
       </Link>
+
+      <LocalBusinessJsonLd
+        name="Chalé Beija-Flor"
+        url={process.env.NEXT_PUBLIC_SITE_URL || "https://chalebeijarflor.netlify.app"}
+        phoneE164="+5535998418107"
+        street="Estrada para Bairro dos Onças, S/N"
+        city="Paraisópolis"
+        region="MG"
+        postalCode="37680-000"
+        countryCode="BR"
+        lat={-22.66}
+        lng={-45.86}
+        images={[
+          "https://SEU-SITE.netlify.app/galeria/chale-1.webp",
+          "https://SEU-SITE.netlify.app/galeria/chale-2.webp",
+        ]}
+      />
     </main>
   );
 }
