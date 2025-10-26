@@ -6,7 +6,7 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://chalebeijaflor.netlify
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: ${SITE}/,
+      url: `${SITE}/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
