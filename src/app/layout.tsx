@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   // Quando for verificar no Search Console, descomente e cole o token:
-  // verification: { google: "COLE_AQUI_O_TOKEN" },
+verification: { google: "twynAKFq5C2BwsMo2Cy8m7J1mttbvm0faC4R9mALuz4" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
