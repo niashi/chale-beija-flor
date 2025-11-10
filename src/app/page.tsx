@@ -246,6 +246,17 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ARTE DO CHALÉ */}
+      <section>
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="mt-6 max-w-5xl mx-auto px-4">
+            <div>
+              <img src="/arte-chale.png" alt="Arte do Chalé" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* DÚVIDAS? */}
       <section className="border-t border-secondary py-16 bg-neutral align-item text-center justify-center pb-0">
         {/* Texto */}
