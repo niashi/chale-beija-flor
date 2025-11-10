@@ -42,7 +42,7 @@ export default function Page() {
         <div className="relative w-full h-[42vh] md:h-[56vh] overflow-hidden flex justify-center items-center">
           <div className="relative w-[90%] md:w-[90%] h-[90%]">
             <img
-              src="/hero2.png"
+              src="/hero.webp"
               alt="Fachada do Chalé"
               className="w-full h-full object-cover rounded-2xl shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]"
               loading="eager"
