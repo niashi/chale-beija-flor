@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: SITE,
     title: TITLE,
     description: DESC,
-    images: ["/og.jpg"],
+    images: ["/hero.webp"],
     locale: "pt_BR",
     siteName: "Chalé Beija-Flor",
   },

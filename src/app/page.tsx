@@ -15,23 +15,9 @@ const BOOKING_URL =
 const AIRBNB_URL =
   "https://www.airbnb.com.br/rooms/1165860464884234578?viralityEntryPoint=1&s=76&source_impression_id=p3_1760490990_P3qvqWA9ImuJNWtj";
 
-// ...dentro do componente da página, imediatamente antes de </main> ou </div> raíz:
-<LocalBusinessJsonLd
-  name="Chalé Beija-Flor"
-  url={process.env.NEXT_PUBLIC_SITE_URL || "https://SEU-SITE.netlify.app"}
-  phoneE164="+55359XXXXYYYY" // confira se tem o dígito 9 (celular)
-  street="Estrada Tal, s/n"
-  city="Gonçalves"
-  region="MG"
-  postalCode="37680-000"
-  countryCode="BR"
-  lat={-22.66}
-  lng={-45.86}
-  images={[
-    "https://SEU-SITE.netlify.app/galeria/chale-1.webp",
-    "https://SEU-SITE.netlify.app/galeria/chale-2.webp",
-  ]}
-/>;
+
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://chalebeijaflor.netlify.app";
 
 export default function Page() {
   return (
@@ -41,11 +27,12 @@ export default function Page() {
         {/* Imagem Principal */}
         <div className="relative w-full h-[42vh] md:h-[56vh] overflow-hidden flex justify-center items-center">
           <div className="relative w-[90%] md:w-[90%] h-[90%]">
-            <img
+            <Image
               src="/hero.webp"
-              alt="Fachada do Chalé"
-              className="w-full h-full object-cover rounded-2xl shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]"
-              loading="eager"
+              alt="Fachada do Chalé Beija-Flor com um deck de madeira e cercado por natureza"
+              fill
+              className="object-cover rounded-2xl shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]"
+              priority
             />
           </div>
         </div>
@@ -212,17 +199,17 @@ export default function Page() {
           </div>
 
           <div className="mt-6 max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-4">
-            <div className="rounded-2xl overflow-hidden shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]">
-              <img src="/foto1.png" alt="Banheira" className="w-full h-full object-cover" />
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]">
+              <Image src="/foto1.png" alt="Banheira de hidromassagem com vista para a natureza" fill className="object-cover" />
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]">
-              <img src="/foto2.png" alt="Suíte" className="w-full h-full object-cover" />
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]">
+              <Image src="/foto2.png" alt="Cama de casal e decoração do quarto do chalé" fill className="object-cover" />
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]">
-              <img src="/foto3.png" alt="Vista" className="w-full h-full object-cover" />
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]">
+              <Image src="/foto3.png" alt="Vista da varanda do chalé para as montanhas" fill className="object-cover" />
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]">
-              <img src="/foto4.png" alt="Araucária" className="w-full h-full object-cover" />
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-[1px_1px_2px_0.5px_rgba(0,0,0,0.56)]">
+              <Image src="/foto4.png" alt="Araucária gigante ao lado do chalé" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -249,10 +236,8 @@ export default function Page() {
       {/* ARTE DO CHALÉ */}
       <section>
         <div className="max-w-5xl mx-auto px-4">
-          <div className="mt-6 max-w-5xl mx-auto px-4">
-            <div>
-              <img src="/arte-chale.png" alt="Arte do Chalé" className="w-full h-full object-cover" />
-            </div>
+          <div className="mt-6 relative aspect-video">
+            <Image src="/arte-chale.png" alt="Arte do Chalé Beija-Flor" fill className="object-contain" />
           </div>
         </div>
       </section>
@@ -333,7 +318,7 @@ export default function Page() {
 
       <LocalBusinessJsonLd
         name="Chalé Beija-Flor"
-        url={process.env.NEXT_PUBLIC_SITE_URL || "https://chalebeijarflor.netlify.app"}
+        url={SITE_URL}
         phoneE164="+5535998418107"
         street="Estrada para Bairro dos Onças, S/N"
         city="Paraisópolis"
@@ -343,8 +328,10 @@ export default function Page() {
         lat={-22.66}
         lng={-45.86}
         images={[
-          "https://SEU-SITE.netlify.app/galeria/chale-1.webp",
-          "https://SEU-SITE.netlify.app/galeria/chale-2.webp",
+          `${SITE_URL}/foto1.png`,
+          `${SITE_URL}/foto2.png`,
+          `${SITE_URL}/foto3.png`,
+          `${SITE_URL}/foto4.png`,
         ]}
       />
     </main>
